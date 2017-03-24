@@ -1,0 +1,27 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    JAVA_HOME: "/usr/lib/jvm/java-7-openjdk-amd64"
+
+phases:
+  install:
+    commands:
+      - echo using environment
+      - env
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo maven version `mvn --version`
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/cloudshape-1.0.0.jar
+    - scripts/*
+  discard-paths: yes
