@@ -24,4 +24,5 @@ artifacts:
   files:
     - target/cloudshape-1.0.0.jar
     - scripts/*
+    - appspec.yml
   discard-paths: yes

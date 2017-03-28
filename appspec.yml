@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: cloudshape-1.0.0.jar
+    destination: /tmp
+hooks:
+  BeforeInstall:
+    - location: before-install.sh
+  AfterInstall:
+    - location: after-install.sh
+      timeout: 180
+  ApplicationStart:
+    - location: application-start.sh
+      timeout: 300
+  ApplicationStop:
+    - location: application-stop.sh
+      timeout: 300
