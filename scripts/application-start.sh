@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "echo application-start" >> /tmp/csyi_log.txt
+echo "Entering ApplicationStart step" >> /tmp/csyi_log.txt
 echo "working directory = $(pwd)" >> /tmp/csyi_log.txt
 echo "date = $(date)" >> /tmp/csyi_log.txt
 echo "whoami = $(whoami)" >> /tmp/csyi_log.txt
